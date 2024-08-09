@@ -3,13 +3,21 @@ const { User } = require('../models');
 module.exports = {
     showHomepage(req, res) {
         res.render('homepage', {
-            title: 'PT Homepage'
+            title: 'Project Tracker'
         });
     },
 
     showRegisterPage(req, res) {
         res.render('register', {
-            title: 'PT Register'
+            title: 'PT Register',
+            register: true
+        })
+    },
+
+    showLoginPage(req, res) {
+        res.render('login', {
+            title: 'PT Log In',
+            login: true
         })
     },
 
